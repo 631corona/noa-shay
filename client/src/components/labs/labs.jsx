@@ -32,8 +32,8 @@ class Labs extends Component {
     this.state.labInfo = 
     <LabInfo 
     labName={selectedOption.value}
-    successRate={}
-    status={}
+    successRate={null}
+    status={null}
     />;
   };
 

@@ -8,7 +8,6 @@ const colors = [
     "danger",
     "warning",
     "info",
-    "light",
     "dark"
 ];
 

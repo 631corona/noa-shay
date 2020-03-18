@@ -10,7 +10,7 @@ class Home extends Component {
   }
   render() {
     return (
-      <div className="heading">
+      <div className="container">
         <h1 className="heading-text">Corona App 631</h1>
         <h4>{this.state.secondHeading[0]}</h4>
       </div>
