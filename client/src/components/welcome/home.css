@@ -1,0 +1,12 @@
+.heading-text{
+    font-family:  'Indie Flower', cursive;
+    font-weight: initial;
+    font-size: 100px;
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

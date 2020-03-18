@@ -1,0 +1,12 @@
+.card-header {
+  text-align: center;
+}
+
+.close:focus {
+  outline: none;
+}
+
+.card {
+  width: 700px;
+  height: 230px;
+}

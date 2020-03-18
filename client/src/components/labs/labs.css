@@ -1,0 +1,20 @@
+.heading-text{
+    font-family:  'Indie Flower', cursive;
+    font-weight: initial;
+    font-size: 90px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.drop-down-list{
+    width: 450px;
+}
+
+.lab-info{
+    padding-top: 20px
+}
