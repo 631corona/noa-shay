@@ -1,6 +1,17 @@
 import React, { Component } from "react";
 import "./lab-info.css";
 
+const colors = [
+    "primary",
+    "secondary",
+    "success",
+    "danger",
+    "warning",
+    "info",
+    "light",
+    "dark"
+];
+
 class LabInfo extends Component {
   constructor(props) {
     super(props);
@@ -8,26 +19,11 @@ class LabInfo extends Component {
   }
 
   getRandomColorClass = () => {
-      const colors = [
-          "primary",
-          "secondary",
-          "success",
-          "danger",
-          "warning",
-          "info",
-          "light",
-          "dark"
-      ];
       const randomColor = colors[Math.floor(Math.random() * colors.length)];
       console.log("color selected:", randomColor);
       const className = "card text-white bg-" + randomColor + " mb-3"
-      console.log(className);
       return className;
   }
-
-  getRandomInt = (min, max) => {
-    Math.floor(Math.random() * (max - min + 1) + min);
-  };
 
   render() {
     return (
@@ -41,9 +37,9 @@ class LabInfo extends Component {
           </div>
           <div class="card-body">
             <h5 class="card-title">Success Rate:</h5>
-            <p class="card-text">100%</p>
+            <p class="card-text">{this.props.successRate}</p>
             <h5 class="card-title">Status:</h5>
-            <p class="card-text">Some Status</p>
+            <p class="card-text">{this.props.status}</p>
           </div>
         </div>
       </div>
