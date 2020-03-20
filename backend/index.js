@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
 var createError = require('http-errors');
+var cors = require("cors");
+
+app.use(cors());
 
 var labsRouter = require("./routes/labs");
 app.use("/api/v1/labs", labsRouter);
