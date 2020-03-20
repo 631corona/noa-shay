@@ -24,8 +24,4 @@ router.get("/", function(req, res, next) {
   res.send(labs);
 });
 
-// router.get("/:labName", function(req, res, next) {
-
-// })
-
 module.exports = router;
