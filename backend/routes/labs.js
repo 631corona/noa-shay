@@ -6,11 +6,11 @@ router.get("/", function(req, res, next) {
   res.send(labs);
 });
 
-router.get("/:name", function(req, res, next) {
+router.get("/:name", function(req, res) {
   labName = labs.find(lab => lab.name == req.params.name);
   if (labName === undefined) {
     console.log(labName);
-    res.sendStatus(404).send("name not found!");
+    return res.sendStatus(404).send("name not found!");
   }
   res.send(labName);
 });

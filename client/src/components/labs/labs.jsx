@@ -56,6 +56,7 @@ class Labs extends Component {
         <div className="heading">
           <h1 className="heading-text">Our Labs</h1>
         </div>
+
         <div className="labs">
           <Select
             className="drop-down-list"
@@ -64,6 +65,7 @@ class Labs extends Component {
             placeholder="Choose a lab"
           />
         </div>
+
         <div className="lab-info">{this.state.labInfo}</div>
       </div>
     );
