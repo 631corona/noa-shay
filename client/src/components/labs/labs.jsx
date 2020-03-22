@@ -17,14 +17,21 @@ class Labs extends Component {
   getData = async () => {
     try {
       const response = await axios.get("http://localhost:8000/api/v1/labs");
-      const labsNames = response.data.map(data => {
-        return { value: data.name, label: data.name };
-      });
-      console.log(labsNames);
-      this.setState({ labsNames });
+      const data = response.data;
+      console.log(data);
+      return data;
     } catch (error) {
       console.log("error", error);
     }
+  };
+
+  setLabNames = async () => {
+    const response = await this.getData();
+    const labsNames = response.map(data => {
+      return { value: data.name, label: data.name };
+    });
+    console.log(labsNames);
+    this.setState({ labsNames });
   };
 
   handleChange = selectedOption => {
@@ -40,7 +47,7 @@ class Labs extends Component {
   };
 
   componentDidMount() {
-    this.getData();
+    this.setLabNames();
   }
 
   render() {
