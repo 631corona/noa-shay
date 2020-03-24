@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import "../nav bar/nav-bar.css";
+import { Link } from "react-router-dom";
 
 class NavBar extends Component {
   constructor(props) {
@@ -24,34 +26,66 @@ class NavBar extends Component {
 
   render() {
     return (
-      <div>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item active">
-                <a className="nav-link" href="#" onClick={this.homeNav()}>
-                  Home <span className="sr-only">(current)</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#" onClick={this.labsNav()}>
-                  Labs
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#" onClick={this.infoNav()}>
-                  Info
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#" onClick={this.imagesNav()}>
-                  Images
-                </a>
-              </li>
-            </ul>
-          </div>
+      <header className="header">
+        <nav>
+          <img
+            className="virus-logo"
+            src={require("../../images/virus.jpg")}
+            alt=""
+          />
+          <h1 className="title">
+            CoViD-19 Updates & Statistics <span className="live">Live</span>{" "}
+          </h1>
+          <ul>
+            {/* <li><Link to="/">Home</Link></li> */}
+            <li>
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://www.cdc.gov/coronavirus/2019-nCoV/index.html"
+              >
+                Labs
+              </a>
+            </li>
+            <li>
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://www.cdc.gov/coronavirus/2019-nCoV/index.html"
+              >
+                Info
+              </a>
+            </li>
+            <li>
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://www.cdc.gov/coronavirus/2019-nCoV/index.html"
+              >
+                Images
+              </a>
+            </li>
+            <li>
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"
+              >
+                Symptoms
+              </a>
+            </li>
+            <li>
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://www.cdc.gov/coronavirus/2019-ncov/prepare/prevention.html"
+              >
+                Protection
+              </a>
+            </li>
+          </ul>
         </nav>
-      </div>
+      </header>
     );
   }
 }
