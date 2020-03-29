@@ -12,7 +12,7 @@ class ImageGallery extends Component {
     return (
       <div className="container">
         <div>
-          <h1 className="heading-text">Image Gallery</h1>
+          <h1 className="heading-text font-weight-light">Image Gallery</h1>
           <h6>some of our best people in great situations</h6>
         </div>
 

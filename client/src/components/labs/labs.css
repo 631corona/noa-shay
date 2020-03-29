@@ -1,9 +1,3 @@
-.heading-text{
-    font-family:  'Indie Flower', cursive;
-    font-weight: initial;
-    font-size: 90px;
-}
-
 .container{
     display: flex;
     justify-content: center;
